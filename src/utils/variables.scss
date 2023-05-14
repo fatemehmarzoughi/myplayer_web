@@ -1,0 +1,156 @@
+:root {
+  // Base Colors
+  --color-white: #ffffff;
+  --color-white-eggshell: #fafafa;
+  --color-black: #181b1f;
+  --color-white-smoke: #f5f5f5;
+  --color-gray-50: #fcfcfc;
+  --color-gray-100: #f7f9fa;
+  --color-gray-200: #f1f3f4;
+  --color-gray-300: #e9eaee;
+  --color-gray-400: #dce0e2;
+  --color-gray-500: #92969b;
+  --color-gray-600: #6a6d72;
+  --color-gray-700: #30363e;
+  --color-gray-800: #222426;
+  --color-gray-900: #181b1f;
+
+  --color-feeyousha-50: #ffe6f0;
+  --color-feeyousha-100: #ffcce1;
+  --color-feeyousha-200: #ff99c4;
+  --color-feeyousha-300: #ff66a6;
+  --color-feeyousha-400: #ff3389;
+  --color-feeyousha-500: #ff006b;
+  --color-feeyousha-600: #cc0056;
+  --color-feeyousha-700: #990040;
+  --color-feeyousha-800: #66002b;
+  --color-feeyousha-900: #330015;
+
+  --color-cerulean-50: #cde8f8;
+  --color-cerulean-100: #b5dcf5;
+  --color-cerulean-200: #9cd1f2;
+  --color-cerulean-300: #6ab9eb;
+  --color-cerulean-400: #39a2e5;
+  --color-cerulean-500: #078bde;
+  --color-cerulean-600: #066fb2;
+  --color-cerulean-700: #045385;
+  --color-cerulean-800: #033859;
+  --color-cerulean-900: #011c2c;
+
+  --color-malachite-50: #f3fdf8;
+  --color-malachite-100: #e2faee;
+  --color-malachite-200: #cef6e3;
+  --color-malachite-300: #6ce3aa;
+  --color-malachite-400: #3bd98d;
+  --color-malachite-500: #0ad071;
+  --color-malachite-600: #089c55;
+  --color-malachite-700: #056839;
+  --color-malachite-800: #03341c;
+  --color-malachite-900: #01150b;
+
+  --color-punch-50: #fdf3e7;
+  --color-punch-100: #fbe7d0;
+  --color-punch-200: #f6cfa1;
+  --color-punch-300: #f2b771;
+  --color-punch-400: #ed9f42;
+  --color-punch-500: #e98713;
+  --color-punch-600: #ba6c0f;
+  --color-punch-700: #8c510b;
+  --color-punch-800: #5d3608;
+  --color-punch-900: #462806;
+
+  --color-pomegranate-50: #fff4f6;
+  --color-pomegranate-100: #fee8e8;
+  --color-pomegranate-200: #fdd8d9;
+  --color-pomegranate-300: #f98b8c;
+  --color-pomegranate-400: #f76466;
+  --color-pomegranate-500: #f53d40;
+  --color-pomegranate-600: #b82e30;
+  --color-pomegranate-700: #7b1f20;
+  --color-pomegranate-800: #3d0f10;
+  --color-pomegranate-900: #190606;
+
+  --color-red-50: #ffe9ed;
+  --color-red-100: #ffc9ce;
+  --color-red-200: #f49292;
+  --color-red-300: #eb6667;
+  --color-red-400: #f53d40;
+  --color-red-500: #f92020;
+  --color-red-600: #eb0b21;
+  --color-red-700: #d9001c;
+  --color-red-800: #cc0014;
+  --color-red-900: #bd0005;
+
+  --color-orange-50: #fff3e1;
+  --color-orange-100: #ffe1b3;
+  --color-orange-200: #ffcd83;
+  --color-orange-300: #ffb851;
+  --color-orange-400: #ffa82d;
+  --color-orange-500: #ff9a11;
+  --color-orange-600: #fc8e10;
+  --color-orange-700: #f67e0e;
+  --color-orange-800: #f06e0d;
+  --color-orange-900: #e6540b;
+
+  --color-lime-50: #feffe6;
+  --color-lime-100: #fbfdc0;
+  --color-lime-200: #f7fa93;
+  --color-lime-300: #f2f763;
+  --color-lime-400: #edf335;
+  --color-lime-500: #fbff00;
+  --color-lime-600: #eaec67;
+  --color-lime-700: #dee200;
+  --color-lime-800: #bfb900;
+  --color-lime-900: #917c00;
+
+  --color-green-50: #e4f8e9;
+  --color-green-100: #bdedca;
+  --color-green-200: #90e1a7;
+  --color-green-300: #57d683;
+  --color-green-400: #00cc66;
+  --color-green-500: #00c248;
+  --color-green-600: #00b23e;
+  --color-green-700: #009f31;
+  --color-green-800: #008e24;
+  --color-green-900: #006e0e;
+
+  --color-blue-50: #e0f7fc;
+  --color-blue-100: #b3ebf7;
+  --color-blue-200: #81dff2;
+  --color-blue-300: #4dd1eb;
+  --color-blue-400: #24c7e5;
+  --color-blue-500: #00bedf;
+  --color-blue-600: #00aecb;
+  --color-blue-700: #0099b1;
+  --color-blue-800: #008598;
+  --color-blue-900: #00626c;
+
+  --color-fiord-50: #c6d3df;
+  --color-fiord-100: #a7b5c2;
+  --color-fiord-200: #8998a6;
+  --color-fiord-300: #6a7a89;
+  --color-fiord-400: #4c5d6d;
+  --color-fiord-500: #2d3f50;
+  --color-fiord-600: #22303d;
+  --color-fiord-700: #22303d;
+  --color-fiord-800: #1b232b;
+  --color-fiord-900: #090d10;
+
+  // backgrounds
+  --surface-color: var(--color-white);
+  --background-color: var(--color-white-eggshell);
+  --border-color: var(--color-gray-400);
+
+  // Spacings
+  --spacing-xxxsmall: 0.125rem;
+  --spacing-xxsmall: 0.25rem;
+  --spacing-xsmall: 0.5rem;
+  --spacing-small: 0.75rem;
+  --spacing-normal: 1rem;
+  --spacing-large: 1.5rem;
+  --spacing-xlarge: 2rem;
+  --spacing-xxlarge: 3rem;
+  --spacing-xxxlarge: 3.5rem;
+  --spacing-xxxxlarge: 4rem;
+  --spacing-xxxxxlarge: 4.5rem;
+}

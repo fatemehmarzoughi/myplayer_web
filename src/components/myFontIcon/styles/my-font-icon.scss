@@ -1,0 +1,22 @@
+@import '../../../utils/mixins.scss';
+
+.my-font-icon {
+    @include flex(center, center, row, nowrap);
+    
+    &--circle {
+        border-radius: 9999px;
+    }
+    
+    &__filled {
+        background-color: var(--background-color);
+        border: 1px solid var(--border-color);
+    }
+    
+    &__outline {
+        border: 1px solid var(--border-color);
+    }
+
+    &__clickable {
+        cursor: pointer;
+    }
+}

@@ -1,4 +1,5 @@
-import { useCallback, useState } from "react";
+import { Context, DispatchContext } from "core";
+import { useCallback, useContext } from "react";
 
 export type IDrawer = {
   onClose?: () => void;
@@ -6,17 +7,36 @@ export type IDrawer = {
 };
 
 export const useDrawer = ({ onClose, onOpen }: IDrawer) => {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const { isDrawerOpen } = useContext(Context);
+  const dispatch = useContext(DispatchContext);
 
   const closeDrawer = useCallback(() => {
-    setIsOpen(false);
+    dispatch?.({
+      type: 'SET_TRACK_LIST_DRAWER',
+      payload: false
+    })
+    console.log('close ... ');
+    console.log(isDrawerOpen);
+    
     onClose?.();
-  }, [onClose]);
+  }, [dispatch, isDrawerOpen, onClose]);
 
   const openDrawer = useCallback(() => {
-    setIsOpen(true);
+    dispatch?.({
+      type: 'SET_TRACK_LIST_DRAWER',
+      payload: true
+    })
     onOpen?.();
-  }, [onOpen]);
+  }, [dispatch, onOpen]);
 
-  return {isOpen, openDrawer, closeDrawer};
+  const toggleDrawer = useCallback(() => {
+    dispatch?.({
+      type: 'SET_TRACK_LIST_DRAWER',
+      payload: !isDrawerOpen
+    })
+    if(isDrawerOpen) onOpen?.();
+    else onClose?.();
+  }, [dispatch, isDrawerOpen, onClose, onOpen])
+
+  return {isOpen: isDrawerOpen, toggleDrawer, closeDrawer, openDrawer};
 };

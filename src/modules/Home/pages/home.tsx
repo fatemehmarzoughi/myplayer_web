@@ -1,11 +1,12 @@
 import React from "react";
+import { Sidebar } from "modules";
 
-import { Sidebar } from "./sidebar";
-
-import './styles/home.scss';
+import "./styles/home.scss";
 
 export const Home: React.FC = React.memo(() => {
-    return (
-        <Sidebar />
-    )
-})
+  return (
+    <>
+      <Sidebar />
+    </>
+  );
+});

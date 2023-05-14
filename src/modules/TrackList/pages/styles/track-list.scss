@@ -1,0 +1,35 @@
+@import "../../../../utils/mixins.scss";
+
+.track-list {
+  @include flex(flex-start, flex-start, column, nowrap);
+  gap: var(--spacing-xxsmall);
+  padding: var(--spacing-normal);
+
+  overflow: visible !important;
+
+  &__play-options {
+    @include flex(center, flex-start, row, none);
+    gap: var(--spacing-small);
+  }
+
+  &__play-option {
+    list-style: none;
+  }
+
+  &__list-holder {
+    padding-inline-start: 0;
+    margin-block: 0;
+  }
+
+  &__chevron {
+    position: absolute;
+    z-index: 2;
+    left: calc(-1 * var(--spacing-xlarge));
+    top: calc(1 * var(--spacing-small));
+    visibility: visible;
+
+    &--open {
+      left: calc(-1 * var(--spacing-small));
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import '../../../utils/mixins.scss';
+
+.my-track {
+    @include flex(center, space-between, row, nowrap);
+    gap: var(--spacing-large);
+    cursor: pointer;
+    min-width: 15rem;
+    background-color: var(--surface-color);
+    margin-block-end: var(--spacing-xxsmall);
+    
+    &__start-part {
+        @include flex(center, flex-start, row, nowrap);
+        gap: var(--spacing-xsmall);
+    }
+
+    &__end-part {
+        @include flex(center, center, column, nowrap);
+    }
+}

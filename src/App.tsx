@@ -1,13 +1,21 @@
-import React from "react";
 import { Provider } from "react-redux";
+import React, { useReducer } from "react";
+import { Home, TrackList, trackListReducer } from "modules";
+import { Context, DispatchContext, initialContext, store } from "core";
 
-import { Home } from "./modules/Home";
-import store from "./redux/store";
+import "./utils/variables.scss";
 
 export const App: React.FC = () => {
+  const [contexts, dispatch] = useReducer(trackListReducer, initialContext);
+
   return (
     <Provider store={store}>
-      <Home />
+      <Context.Provider value={contexts}>
+        <DispatchContext.Provider value={dispatch}>
+          {/* <Home /> */}
+          <TrackList />
+        </DispatchContext.Provider>
+      </Context.Provider>
     </Provider>
   );
 };
