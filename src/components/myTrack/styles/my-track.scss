@@ -16,4 +16,8 @@
     &__end-part {
         @include flex(center, center, column, nowrap);
     }
+
+    @media screen and (max-width: map-get($breakpoints, 'sm')) {
+        min-width: 100%;
+      }
 }

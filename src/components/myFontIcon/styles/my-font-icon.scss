@@ -2,6 +2,7 @@
 
 .my-font-icon {
     @include flex(center, center, row, nowrap);
+    width: fit-content;
     
     &--circle {
         border-radius: 9999px;

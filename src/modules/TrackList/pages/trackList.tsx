@@ -1,15 +1,15 @@
-import { useDrawer, useTimeCalculator } from "hooks";
-import { MyFontIcon, MyTrack } from "components";
+import clsx from "clsx";
 import React, { useState } from "react";
 import { Reorder } from "framer-motion";
 import { IoIosRepeat } from "react-icons/io";
 import { IoShuffleSharp } from "react-icons/io5";
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import { MyFontIcon, MyTrack } from "components";
+import { Drawer, Typography } from "@mui/material";
+import { useDrawer, useTimeCalculator } from "hooks";
 import { TrackListItem, TrackListItemType } from "API";
-import { Drawer, Tooltip, Typography } from "@mui/material";
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 import "./styles/track-list.scss";
-import clsx from "clsx";
 
 export const TrackList: React.FC = React.memo(() => {
   const { timeCalculator } = useTimeCalculator({ isDoubleDigit: false });
@@ -26,6 +26,7 @@ export const TrackList: React.FC = React.memo(() => {
         paper: "track-list",
       }}
     >
+      <div className={clsx(isOpen && "track-list__header")}>
         <MyFontIcon
           circle
           variant="filled"
@@ -47,6 +48,8 @@ export const TrackList: React.FC = React.memo(() => {
       <Typography variant="h5" color="black" fontWeight={700}>
         Track list
       </Typography>
+
+      </div>
       <div className="track-list__play-options">
         <IoIosRepeat color="gray" size={30} />
         <IoShuffleSharp color="gray" size={27} />
